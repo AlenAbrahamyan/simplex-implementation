@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Սիմպլեքս Մեթոդ</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="./scripts/simplex.js"></script>
+  </head>
+  <body class="simplex">
+    <center>
+      <h2>Սիմպլեքս Մեթոդ</h2>
+
+      <p>Նպատակային Ֆունկցիա</p>
+      <div id="max">
+        <label>I=</label>
+        <input type="number" id="c1" value="3" />
+        <label>X1+</label>
+        <input type="number" id="c2" value="5" />
+        <label>X2+</label>
+        <input type="number" id="c3" value="4" />
+        <label>X3</label>
+      </div>
+
+      <p>Սահմանափակումներ</p>
+      <div id="limitation1">
+        <input type="number" id="L1A1" value="0.1" />
+        <label>X1+</label>
+        <input type="number" id="L1A2" value="0.2" />
+        <label>X2+</label>
+        <input type="number" id="L1A3" value="0.4" />
+        <label>X3 <=</label>
+        <input type="number" id="L1B" value="1100" />
+      </div>
+      <br />
+
+      <div id="limitation2">
+        <input type="number" id="L2A1" value="0.05" />
+        <label>X1+</label>
+        <input type="number" id="L2A2" value="0.02" />
+        <label>X2+</label>
+        <input type="number" id="L2A3" value="0.02" />
+        <label>X3 <=</label>
+        <input type="number" id="L2B" value="120" />
+      </div>
+      <br />
+
+      <div id="limitation3">
+        <input type="number" id="L3A1" value="3" />
+        <label>X1+</label>
+        <input type="number" id="L3A2" value="1" />
+        <label>X2+</label>
+        <input type="number" id="L3A3" value="2" />
+        <label>X3 <=</label>
+        <input type="number" id="L3B" value="8000" />
+      </div>
+      <br />
+      <button onclick="calculateAndShow()">Հաշվել</button>
+      <br />
+      <br />
+      <div id="tables">
+        <!-- <table>
+          <tbody>
+            <tr>
+              <td></td> <td></td> <td></td> <td>c1=</td> <td>c2=</td> <td>c3=</td> <td>c4=0</td> <td>c5=0</td> <td>c6=0</td> <td></td>
+            </tr>
+            <tr>
+              <td>i</td> <td>bazis</td> <td>B</td> <td>A1</td> <td>A2</td> <td>A3</td> <td>A4</td> <td>A5</td> <td>A6</td> <td>min(xi/xij)</td>
+            </tr>
+            <tr>
+              <td>1</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+            </tr>
+            <tr>
+              <td>2</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+            </tr>
+            <tr>
+              <td>3</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+            </tr>
+            <tr>
+              <td>m+1</td> <td>ij-cj</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+            </tr>
+          </tbody>
+        </table> -->
+      </div>
+    </center>
+  </body>
+</html>
