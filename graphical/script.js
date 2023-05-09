@@ -4,6 +4,20 @@ const ctx = canvas.getContext("2d")
 canvas.width = 600
 canvas.height = 600
 
+const drawScaleNumbers = () => {
+  ctx.font = "13px Arial"
+
+  for (let y = 50; y < canvas.height; y += 50) {
+    ctx.fillText(y, 1, canvas.height - y)
+  }
+
+  for (let x = 50; x < canvas.height; x += 50) {
+    ctx.fillText(x, x, canvas.height - 3)
+  }
+}
+
+drawScaleNumbers()
+
 function draw() {
   const x = document.getElementById("x").value
   const y = document.getElementById("y").value
@@ -14,13 +28,14 @@ function draw() {
     const j = (s - i * x) / y
     ctx.lineTo(i, canvas.height - j)
     ctx.stroke()
-    console.log(i, j)
   }
 
   ctx.closePath()
+
+  drawScaleNumbers()
 }
 
 canvas.addEventListener("mousemove", (e) => {
   const coord = document.getElementById("coord")
-  coord.innerHTML = `|X:${e.clientX} Y:${e.clientY}`
+  coord.innerHTML = `|X:${e.offsetX} Y:${canvas.height - e.offsetY}`
 })
